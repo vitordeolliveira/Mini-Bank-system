@@ -8,30 +8,35 @@ class Banco_Intel:
 
     def depositar(self ,valor):
         if valor < 1:
-            print("Não foi possivel fazer o deposito valor menor ou igual a R$1,00")
+            return("Não foi possivel fazer o deposito valor menor ou igual a R$1,00")
         else:
             self.saldo += valor
-            print(f"Deposito de valor {valor:.2f} realizado com sucesso")
             self._extrato.append(f"Deposito : {valor:.2f}")
+            return(f"Deposito de valor {valor:.2f} realizado com sucesso")
+           
 
     def sacar(self , valor):
         if valor > self.saldo :
-            print(f"Conta de ID {self.Id} Não tem saldo suficiente")
+            return(f"Conta de ID {self.Id} Não tem saldo suficiente")
         elif valor > 500:
-            print(f"Valor Maior que R$500,00")
+            return(f"Valor Maior que R$500,00")
         elif self.limete == 0:
-            print("Limite Maximo de Saque diario atingido")
+            return("Limite Maximo de Saque diario atingido")
         else:
             self.limete -= 1
             self.saldo -= valor
-            print(f"Saque de valor {valor:.2f} Realizado Com sucesso")
             self._extrato.append(f"SAQUE : {valor:.2f}")
+            return (f"Saque de valor {valor:.2f} Realizado Com sucesso")
 
     def extrato(self):
-        print(self._extrato)
+        return(self._extrato)
+    
+    def saldo_da_conta(self):
+        return (f"R${self.saldo:.2f} ")
 
 user_1 = Banco_Intel("Vitor Oliveira" , 9579907 , 10000)
-user_1.depositar(500)
-user_1.sacar(250)
-user_1.depositar(1000)
-user_1.extrato()
+print(user_1.depositar(500))
+print(user_1.sacar(250))
+print(user_1.depositar(1000))
+print(user_1.extrato())
+print(user_1.saldo_da_conta())
