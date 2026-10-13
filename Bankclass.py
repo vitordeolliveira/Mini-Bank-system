@@ -1,6 +1,6 @@
 from abc import ABC
 
-class Banco_Intel(ABC):
+class Capiba_Bank(ABC):
     def __init__(self , titular = "" , Id = 0 ,saldo = 0):
         self._titular = titular #Protect (+)
         self.Id = Id #Public (#)
@@ -10,7 +10,7 @@ class Banco_Intel(ABC):
 
     def depositar(self ,valor):
         if valor < 1:
-            return("Não foi possivel fazer o deposito valor inferior a R$1,00")
+            return("Não foi possível fazer o deposito valor inferior a R$1,00")
         else:
             self.__saldo += valor
             self._extrato.append(f"Deposito : R${valor:.2f}")
@@ -18,13 +18,13 @@ class Banco_Intel(ABC):
         
     def sacar(self , valor):
         if valor < 1:
-            return("Não foi possivel fazer o saque valor inferior a R$1,00")
+            return("Não foi possível fazer o saque valor inferior a R$1,00")
         elif valor > self.__saldo :
             return(f"Conta de ID {self.Id} Não tem saldo suficiente")
         elif valor > 500:
             return(f"Saque Inválido valor superior a R$500,00")
         elif self.limite == 0:
-            return("Limite Maximo de Saque diario atingido")
+            return("Limite Máximo de Saque diario atingido")
         else:
             self.limite -= 1
             self.__saldo -= valor
@@ -35,4 +35,4 @@ class Banco_Intel(ABC):
         return(self._extrato)
     
     def saldo_da_conta(self):
-        return (f"Conta de ID {self.Id} com saldo atua = R${self.__saldo:.2f} ")
+        return (f"Conta de ID {self.Id} com saldo atual = R${self.__saldo:.2f} ")

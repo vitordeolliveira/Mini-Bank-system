@@ -1,4 +1,4 @@
-# Sistema Bancário - Banco Intel 🏦
+# Sistema Bancário - Capiba_Bank 🏦
 
 Um sistema bancário simples e eficiente desenvolvido em Python utilizando o paradigma de **Programação Orientada a Objetos (POO)**. O projeto simula operações financeiras básicas de uma conta corrente, como depósitos, saques e visualização de extrato, aplicando regras de negócio e limites diários.
 
@@ -17,7 +17,7 @@ Um sistema bancário simples e eficiente desenvolvido em Python utilizando o par
 
 ## 📋 Como Funciona o Código
 
-A classe principal `Banco_Intel` gerencia as seguintes propriedades de cada cliente:
+A classe principal `Capiba_Bank` gerencia as seguintes propriedades de cada cliente:
 * `titular`: Nome do dono da conta.
 * `Id`: Identificador único do cliente.
 * `saldo`: Valor em dinheiro disponível.
@@ -44,7 +44,7 @@ user_1.extrato()
 ## 🔧 Como Executar o Projeto
 
 1. Certifique-se de ter o **Python 3** instalado em sua máquina.
-2. Baixe ou copie o código do arquivo `main.py`.
+2. Baixe ou copie o código do arquivo `__main__.py`.
 3. Abra o terminal na pasta do arquivo e execute o comando:
    ```bash
    python main.py
