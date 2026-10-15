@@ -7,7 +7,7 @@ Um sistema bancário simples e eficiente desenvolvido em Python utilizando o par
 * **Depósito Seguro**: Permite adicionar fundos à conta, validando um valor mínimo de R\$ 1,00 para a operação.
 * **Saque Controlado**: Realiza saques verificando o saldo disponível e aplicando duas travas de segurança:
   * Limite máximo de **R\$ 500,00 por saque**.
-  * Limite de **3 saques diários**.
+  * Limite de **R\$ 1,000.00 diários**.
 * **Histórico de Extrato**: Armazena e exibe todas as movimentações financeiras realizadas na conta em uma lista.
 
 ## 🛠️ Tecnologias Utilizadas
