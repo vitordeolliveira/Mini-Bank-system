@@ -1,6 +1,6 @@
 from core.bank import Bank
 
-class Capiba_bank(Bank):
+class Capiba_Bank(Bank):
     def __init__(self, titular, Id, saldo, chave):
         super().__init__(titular, Id, saldo, chave)
 

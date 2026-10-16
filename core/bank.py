@@ -28,7 +28,9 @@ class Bank(ABC):
         if self.validar_senha(chave):
             if len(novo_titular.strip()) < 5:
                 return "Erro: Nome inválido."
-            self._titular = novo_titular
+            else:
+                self._titular = novo_titular
+                return "Alterações feitas!"
         else:
             return "Falha na autenticação, Alterações canceladas!"
 

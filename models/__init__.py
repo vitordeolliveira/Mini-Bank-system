@@ -1,1 +1,1 @@
-from .Capiba_Bank import Capiba_Bank
+from .capiba_bank import Capiba_Bank
